@@ -1,0 +1,58 @@
+.row
+    max-width: $grid-width
+    
+    margin: 0 auto
+    margin-bottom: $margin-vertical-big
+    &:last-child
+        margin-bottom: 0
+        @include respond (tab-port)
+        margin-bottom: 4rem
+    @include clearfix
+    @include respond (tab-land)
+        max-width: 90.1rem
+    @include respond (tab-port)
+        max-width: 60rem
+            
+.col-1-of-2
+    width: calc((100% - #{$guter-horisontal}) / 2 )
+    
+
+.col-1-of-3
+    width: calc((100% - 2 * #{$guter-horisontal}) / 3 )
+    @include respond (tab-land)
+        width: calc((100% - 2 * #{1rem}) / 3 )
+.col-2-of-3
+    width: calc( 2 * ((100% - 2 * #{$guter-horisontal}) / 3) + #{$guter-horisontal})
+
+
+.col-1-of-4
+    width: calc((100% - 3 * #{$guter-horisontal}) / 4 )
+    @include respond (tab-land)
+        width: calc((100% - 3 * #{1rem}) / 4 )
+   
+.col-2-of-4
+    width: calc( 2 * ((100% - 3 * #{$guter-horisontal}) / 4) + #{$guter-horisontal})
+    
+
+
+.col-3-of-4
+    width: calc( 3 * ((100% - 3 * #{$guter-horisontal}) / 4) + 2 * #{$guter-horisontal})
+
+
+[class^="col-"]
+    &:not(:last-child)
+        margin-right: $guter-horisontal
+    
+    float: left
+    @include respond (tab-land)
+        &:not(:last-child)
+            margin-right: 1rem
+
+    @include respond (tab-port)
+        width: 100%
+        margin-right: 0 !important
+        margin-bottom: 4rem
+
+   
+    
+        

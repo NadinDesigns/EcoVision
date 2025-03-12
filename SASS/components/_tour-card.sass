@@ -1,0 +1,132 @@
+.card-tour
+    
+    height: 50rem
+    perspective: 150rem
+    -moz-perspective: 150rem
+    transition: all 1s
+    position: relative
+    @media only screen and (max-width:900px), (hover:none)
+        height: auto
+    
+
+    &__side
+        position: absolute
+        height: 50rem
+        transition: all 1s ease
+        color: $color-white
+        top: 0rem
+        left: 0rem
+        width: 100%
+        backface-visibility: hidden
+        border-radius: .5rem
+        overflow: hidden
+        @media only screen and (max-width:900px), (hover:none)
+            height: auto
+            position: relative
+        
+        &_front
+            background: $color-white
+            box-shadow: $box-shadow
+            @media only screen and (max-width:900px), (hover:none)
+                padding-bottom: 13rem
+        &_back
+            transform: rotateY(180deg)
+            background: linear-gradient($color-light-grenn-grad, $color-dark-grenn-grad)
+            box-shadow: $box-shadow
+            @media only screen and (max-width:900px), (hover:none)
+                transform: rotateY(0deg)
+                padding: 5rem
+                clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 100%)
+                padding-top: 12rem
+                margin-top: -9rem
+    &:hover &__side_front
+        transform: rotateY(-180deg)
+        @include respond (tab-port)
+            transform: rotateY(0deg)
+    &:hover &__side_back
+        transform: rotateY(0deg)
+
+
+
+    &__img
+        
+        height: 25rem
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
+        &_1
+            background: $color-light-grenn-grad url(../../img/card-tour1.jpg) center/cover no-repeat         
+        &_2
+            background: $color-light-grenn-grad url(../../img/card-tour2.jpg) center/cover no-repeat
+        &_3
+            background: $color-light-grenn-grad url(../../img/card-tour3.jpg) center/cover no-repeat   
+        @media only screen and (max-width:900px), (hover:none)
+            height: 30rem
+    &__title
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        position: absolute
+        top: 17rem
+        right: 0rem
+        @include respond (tab-port)
+            top: 25rem
+            font-size: 2.5rem
+
+    &__span
+        background: linear-gradient(90deg, $color-light-grenn-grad, $color-dark-grenn-grad)
+        padding: 1rem 2rem
+        &_1
+        &_2
+            position: absolute
+            top: 3.5rem
+            right: 0rem
+            @include respond (tab-port)
+                top: 3.8rem
+
+    &__descr
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 70%
+            text-align: center
+            li
+                font-size: $font-size-pagraph
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                
+                width: 90%
+                display: inline-block
+                &:not(:last-child)
+                    margin-bottom: 2rem
+
+                @include respond (tab-land)
+                    font-size: 1.5rem
+
+                @include respond (tab-port)
+                    font-size: 2rem
+    &__backSeid-box
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        @media only screen and (max-width:900px), (hover:none)
+            position: relative
+            top: 0
+            left: 0
+            transform: translate(0%, 0%)
+            text-align: center
+
+    &__text
+        margin-bottom: 8rem
+        color: $color-white
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        &_1
+            font-size: $font-size-pagraph
+            font-weight: 300
+        &_2
+            font-size: $font-size-pagraph
+            font-weight: 500

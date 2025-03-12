@@ -1,0 +1,75 @@
+.title-first
+    
+    color: $color-white
+    
+    &__main
+        display: block
+        font-weight: 800
+        font-size: 5rem
+        line-height: 6rem
+        letter-spacing: 1rem
+        text-transform: uppercase
+        margin-bottom: 1rem
+        animation-name: LeftToRight
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        @include respond (tab-land)
+            font-size: 4rem
+        @include respond (tab-port)
+            font-size: 3.6rem
+            letter-spacing: .5rem
+            margin-bottom: 0
+    &__secondary
+        display: block
+        font-weight: 200
+        font-size: 4rem
+        line-height: 4.8rem
+        letter-spacing: .5rem
+        animation-name: RightToLeft
+        animation-duration: 2s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden
+        margin-bottom: 7rem
+        @include respond (tab-land)
+            font-size: 3.5rem
+            margin-bottom: 3.5rem
+        @include respond (tab-port)
+            font-size: 3rem
+            letter-spacing: .2rem
+        
+.title-secondary
+    font-size: $font-size-pagraph-h2
+    letter-spacing: 1rem
+    text-transform: uppercase
+    font-weight: 800
+    background: linear-gradient(90deg, rgba($color-light-grenn-grad, 1), rgba($color-dark-grenn-grad, 1))
+    -webkit-background-clip: text
+    color: transparent
+    backface-visibility: hidden
+    transition: all .4s
+    &:hover
+        transform: skewY(2deg) skewX(5deg) scale(1.1)
+        text-shadow: $box-shadow
+    &_white
+        color: $color-white
+    @include respond (tab-land)
+        font-size: 3rem
+    @include respond (tab-port)
+        letter-spacing: .6rem    
+
+.title-third
+    font-size: $font-size-pagraph-h3
+    letter-spacing: .2rem
+    text-transform: uppercase
+    font-weight: 700
+    @include respond (tab-land)
+        font-size: 1.8rem
+.paragraph
+    font-size: $font-size-pagraph
+    letter-spacing: .2rem
+    line-height: 140%
+    @include respond (tab-land)
+        font-size: 1.5rem
