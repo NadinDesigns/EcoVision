@@ -9,8 +9,7 @@ This website is dedicated to promoting eco-friendly initiatives and sustainable 
 
 ## 🔧 Technologies used  
 - HTML  
-- CSS  
-- JavaScript (if applicable)  
+- CSS    
 - GitHub Pages  
 
 ## 📩 Contact  
